@@ -1,8 +1,10 @@
-# React + Vite
+# Donut Charts
+install
+``npm install --save chart.js react-chartjs-2``
+## import and use individual components:
+``import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<Doughnut data={...} />``
